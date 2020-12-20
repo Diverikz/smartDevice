@@ -175,7 +175,7 @@ header section#showcase #line-and-info #long-line {
   margin-bottom: 12px;
 }
 
-header section#showcase #line-and-info p {
+header section#showcase #line-and-info p, header section#showcase #line-and-info .modal .check__group label, .modal .check__group header section#showcase #line-and-info label {
   font-family: "PT Mono", monospace;
   font-weight: 100;
   margin-left: 20px;
@@ -219,7 +219,7 @@ header section#showcase #line-and-info p {
   color: #00b2ff;
 }
 
-.main__container section#cards .card p {
+.main__container section#cards .card p, .main__container section#cards .card .modal .check__group label, .modal .check__group .main__container section#cards .card label {
   font-family: "PT Mono", monospace;
   font-size: 14px;
   color: #666666;
@@ -238,7 +238,7 @@ header section#showcase #line-and-info p {
   color: #fff;
 }
 
-.main__container section#cards .card:hover p {
+.main__container section#cards .card:hover p, .main__container section#cards .card:hover .modal .check__group label, .modal .check__group .main__container section#cards .card:hover label {
   color: #fff;
 }
 
@@ -273,12 +273,152 @@ header section#showcase #line-and-info p {
   font-weight: 100;
 }
 
-.main__container section#about .about__text p {
+.main__container section#about .about__text p, .main__container section#about .about__text .modal .check__group label, .modal .check__group .main__container section#about .about__text label {
   font-family: "PT Mono", monospace;
   font-size: 15px;
 }
 
 .main__container section#about .about__text > * {
   margin: 1.2rem 0;
+}
+
+.modal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(90, 90, 90, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal .modal__content {
+  width: 450px;
+  background: #00b2ff;
+  color: #fff;
+  padding: 2rem 2.5rem;
+}
+
+.modal .modal__content .close {
+  margin-left: 100%;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modal .modal__content h2 {
+  font-weight: "Roboto Condensed", sans-serif;
+  font-weight: 100;
+  font-size: 28px;
+}
+
+.modal .modal__content p, .modal .modal__content .check__group label, .modal .check__group .modal__content label {
+  font-family: "PT Mono", monospace;
+  font-weight: 100;
+  font-size: 16px;
+}
+
+.modal .modal__content .input {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  outline: none;
+  margin: 1.2rem 0;
+  font-family: "PT Mono", monospace;
+}
+
+.modal .modal__content .input::-webkit-input-placeholder {
+  color: #fff;
+  font-family: "PT Mono", monospace;
+}
+
+.modal .modal__content .input:-ms-input-placeholder {
+  color: #fff;
+  font-family: "PT Mono", monospace;
+}
+
+.modal .modal__content .input::-ms-input-placeholder {
+  color: #fff;
+  font-family: "PT Mono", monospace;
+}
+
+.modal .modal__content .input::placeholder {
+  color: #fff;
+  font-family: "PT Mono", monospace;
+}
+
+.modal .modal__content textarea {
+  outline: none;
+  resize: none;
+  overflow: auto;
+  height: 100px;
+}
+
+.modal .btn, .modal .btn--solid, .modal .btn--hollow {
+  width: 100%;
+  color: #fff;
+  background: transparent;
+  border: 1px #fff solid;
+  padding: 0.7rem;
+}
+
+.modal .btn:hover, .modal .btn--solid:hover, .modal .btn--hollow:hover {
+  color: #00b2ff;
+  background: #fff;
+}
+
+.modal .check__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 0.5rem;
+  margin-top: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.modal .check__group #check__input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 0.07rem 0.27rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.modal .check__group #check__input:after {
+  content: "\2714";
+  font-size: 12px;
+  position: relative;
+  color: transparent;
+}
+
+.modal .check__group #check__input:checked:after {
+  color: #fff;
+}
+
+.modal .check__group label {
+  font-size: 12px !important;
+  display: inline-block;
+  width: 90%;
+}
+
+.modal .check__group > * {
+  margin: 0.6rem 0;
 }
 /*# sourceMappingURL=style.css.map */

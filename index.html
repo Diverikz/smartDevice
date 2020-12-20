@@ -9,8 +9,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
-  <body>
+  <body id="main-body">
     <header>
       <div class="header__container">
         <nav>
@@ -125,5 +126,38 @@
         </section>
       </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal">
+      <div class="modal__content">
+        <span class="close">&times;</span>
+        <h2>Закажите звонок</h2>
+        <p>
+          Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
+        </p>
+        <input class="input" type="text" name="name" placeholder="Имя" />
+        <input
+          class="input"
+          type="tel"
+          name="telephone"
+          placeholder="Телефон"
+        />
+        <textarea
+          class="input"
+          name="question"
+          placeholder="Ваш вопрос"
+        ></textarea>
+        <button class="btn">Отправить</button>
+        <div class="check__group">
+          <input id="check__input" type="checkbox" value="agreement" />
+          <label for="check__input"
+            >Я согласен на обработку персональных данных</label
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="app.js"></script>
   </body>
 </html>
