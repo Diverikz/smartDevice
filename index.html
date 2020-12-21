@@ -11,13 +11,21 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
-  <body id="main-body">
+  <body
+    id="main-body"
+    onload="mobileNavAdjustment();"
+    onresize="mobileNavAdjustment();"
+  >
     <header>
       <div class="header__container">
         <nav>
           <div id="logo__menu">
             <svg class="m-logo">
               <use xlink:href="img/sprite.svg#main-logo" />
+            </svg>
+
+            <svg class="small-logo">
+              <use xlink:href="img/sprite.svg#brain-logo" />
             </svg>
 
             <div class="menu__lines">
@@ -27,20 +35,20 @@
           </div>
 
           <div class="nav__items">
-            <div class="nav__item">
+            <div id="mail-icon" class="nav__item">
               <svg class="icon">
                 <use xlink:href="img/sprite.svg#mail" />
               </svg>
               <span class="hide">info@sd.ru</span>
             </div>
-            <div class="nav__item">
+            <div id="phone-icon" class="nav__item">
               <svg class="icon">
                 <use xlink:href="img/sprite.svg#phone" />
               </svg>
               <span class="hide">+7 (495) 000 52 52</span>
             </div>
             <div class="hide nav__item">
-              <span id="call" class="mail">ЗАКАЗАТЬ ЗВОНОК</span>
+              <span id="call" class="hide">ЗАКАЗАТЬ ЗВОНОК</span>
             </div>
           </div>
         </nav>

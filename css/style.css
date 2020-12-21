@@ -13,7 +13,7 @@
   background: #00b2ff;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 500;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2.5rem;
   cursor: pointer;
 }
 
@@ -22,6 +22,7 @@
   max-width: 100%;
   margin-left: 4rem;
   margin-top: 1rem;
+  padding: 0.9rem;
 }
 
 .btn--solid:hover {
@@ -80,9 +81,16 @@ header nav #logo__menu {
   display: flex;
 }
 
-header nav #logo__menu .m-logo {
+header nav #logo__menu svg.m-logo {
   height: 50px;
   width: 200px;
+}
+
+header nav #logo__menu svg.small-logo {
+  display: none;
+  height: 46px;
+  width: 46px;
+  margin: 0.4rem;
 }
 
 header nav #logo__menu .menu__lines {
@@ -104,7 +112,6 @@ header nav .nav__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -420,5 +427,138 @@ header section#showcase #line-and-info p, header section#showcase #line-and-info
 
 .modal .check__group > * {
   margin: 0.6rem 0;
+}
+
+@media (max-width: 1150px) {
+  .nav__items {
+    margin-left: 12vw !important;
+  }
+  .nav__item {
+    margin-left: 25px !important;
+  }
+  section#showcase {
+    width: 55% !important;
+    margin-top: 15vh !important;
+  }
+}
+
+@media (max-width: 950px) {
+  nav .menu__lines {
+    margin-left: 3vw !important;
+  }
+  nav .nav__items {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 751px) {
+  header {
+    background: url("../img/750_main_bc.png") no-repeat center center/cover;
+  }
+  header nav {
+    -webkit-box-pack: none !important;
+        -ms-flex-pack: none !important;
+            justify-content: none !important;
+    padding-top: 1rem !important;
+  }
+  header nav .main-logo {
+    margin-right: auto;
+  }
+  header nav .menu__lines {
+    margin: 0 2rem !important;
+  }
+  header nav .nav__items {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  header nav .nav__items .icon {
+    margin: 0 1rem !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  header nav .hide {
+    display: none !important;
+  }
+  header section#showcase {
+    margin-top: 18vh !important;
+  }
+  header section#showcase h1 {
+    font-size: 53px !important;
+    margin-bottom: 0 !important;
+  }
+  header section#showcase #long-line {
+    display: inline-block !important;
+    width: 38px !important;
+    margin-right: 1.5rem;
+  }
+  header section#showcase p, header section#showcase .modal .check__group label, .modal .check__group header section#showcase label {
+    display: inline-block !important;
+    margin: 1.2rem 0 !important;
+  }
+  header section#showcase img {
+    position: absolute;
+    top: 18vh;
+    right: -25vw;
+    width: 400px !important;
+    height: 293px !important;
+  }
+  .main-container {
+    padding-top: 1rem !important;
+  }
+  section#cards {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+@media (max-width: 610px) {
+  nav {
+    padding-top: none !important;
+    -webkit-box-pack: initial !important;
+        -ms-flex-pack: initial !important;
+            justify-content: initial !important;
+  }
+  nav #logo__menu .m-logo {
+    display: none !important;
+  }
+  nav #logo__menu .small-logo {
+    display: initial !important;
+    margin-left: 1rem !important;
+  }
+  nav #logo__menu .menu__lines .line {
+    margin-top: 19px !important;
+  }
+  nav .nav__item {
+    margin-left: 5px !important;
+  }
+  .main__container {
+    width: 92vw !important;
+  }
+  section#showcase {
+    margin-left: 1rem !important;
+  }
+  section#showcase .btn--solid {
+    margin-left: 0 !important;
+  }
+  section#cards {
+    -ms-grid-columns: none !important;
+        grid-template-columns: none !important;
+    -ms-grid-rows: (1fr)[auto] !important;
+        grid-template-rows: repeat(auto, 1fr) !important;
+    grid-gap: 1rem !important;
+  }
+  section#about img {
+    display: none !important;
+  }
+}
+
+@media (max-width: 500px) {
+  section#showcase {
+    width: 90vw !important;
+    margin-top: 0 !important;
+  }
+  .about__text {
+    margin-left: 0 !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
